@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<!---->
+    <category>
+        <pattern>^ گواستنەوە ^</pattern>
+            <template>
+                ئەو خوێندکارانەی کە خوازیاری گواستنەوە یان دەبەزینیان هەیە دەتوانن سەردانی ئەم لینکە بکەن بۆ وەرگرتنی زانیاری زیاتر
+                  <link>
+                      <text>www.mhe-studentaffairs.com</text>
+                      <url>www.mhe-studentaffairs.com</url>
+                  </link>
+             </template>
+    </category>
+<!---->
+    <category>
+        <pattern>^ دابەزین ^</pattern>
+        <template><srai>^ گواستنەوە ^</srai></template>
+    </category>
+   
+</aiml>

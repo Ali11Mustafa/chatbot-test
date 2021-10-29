@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+<!---->
+        <category>
+            <pattern>*</pattern>
+            <template>
+                ببورە لە پرسیارەکەت تێنەگەشتم دەتوانی ڕوونتر پرسیارەکەت بکەیت <split/>
+            </template>
+        </category>
+
+<!---->
+        <category>
+            <pattern>^ زانکۆ</pattern>
+            <template>
+                دەتەوێت چی بزانیت دەربارەی زانکۆی کۆیە؟
+                <button>
+                    <text>نەخشەی زانکۆ</text>
+                    <postback>نەخشەی زانکۆ ^</postback>
+                </button>
+                <button>
+                    <text>ناونیشانی زانکۆ</text>
+                    <postback>ناونیشانی زانکۆ</postback>
+                </button>
+                  <button>
+                    <text>کورتەیەک دەربارەی زانکۆی کۆیە</text>
+                    <postback> باسی زانکۆ</postback>
+                </button><split/>
+                ...یان هەر پرسیارێکی ترت هەیە دەتوانی بیکەی
+                
+            </template>
+        </category>
+<!---->
+        <category>
+            <pattern>نەخشەی زانکۆ ^</pattern>
+            <template>
+                <link>
+                    <text>نەخشەی زانکۆی کۆیە | گوگڵ ماپ</text>
+                    <url>https://goo.gl/maps/T9xox7akza7PFirk9</url>
+                </link>
+                
+            </template>
+        </category>
+<!---->
+        <category>
+            <pattern>ناونیشانی زانکۆ</pattern>
+            <template> 
+                 زانکۆی کۆیه‌ که‌وتۆته‌ شاری کۆیه‌ ( کۆیسنجاق )، که‌ کاتژمێرێک ڕێ دووره‌ له‌ ڕۆژهه‌ڵاتی هه‌ولێری پایته‌ختی هه‌رێمی کوردستانه‌وه‌ له‌ باکوری عێراق. زانکۆکه‌ که‌وتۆته‌ دامێنی چیای هەیبەت سوڵتان.                 <split/> 
+                    دتوانی شوێنی ئەم گوگڵ ماپەی خوارەوە بکەوی بۆ گەیشتن بە زانکۆ
+                   <link>
+                       <text>زانکۆی کۆیە | گوگڵ ماپ </text>
+                       <url>https://goo.gl/maps/pidvY38qzSX5nf2a8</url>
+                   </link>
+            </template>
+        </category>
+<!---->
+        <category>
+            <pattern>زانکۆ دەکەوێتە کوێ</pattern>
+            <template>
+                <srai>ناونیشانی زانکۆ</srai>
+            </template>
+        </category>
+<!---->
+        <category>
+            <pattern>^ دەکەوێتە کوێ #</pattern>
+            <template>
+                <srai>ناونیشانی زانکۆ</srai>
+            </template>
+        </category>
+<!---->
+        <category>
+            <pattern># لە کوێیە</pattern>
+            <template>
+                <srai>ناونیشانی زانکۆ</srai>
+            </template>
+        </category>
+<!---->
+            <category>
+                <pattern>^ بڕۆم ^ زانکۆ</pattern>
+                <template>
+                  دتوانی شوێنی ئەم گوگڵ ماپەی خوارەوە بکەوی بۆ گەیشتن بە زانکۆ
+                    <link>
+                       <text>زانکۆی کۆیە | گوگڵ ماپ </text>
+                       <url>https://goo.gl/maps/pidvY38qzSX5nf2a8</url>
+                   </link>
+                </template>
+            </category>
+<!---->
+            <category>
+                <pattern>^ چەند فاکەڵتی #</pattern>
+                <template>
+                    زانکۆی کۆیە لە چوار فاکەڵتی و دوو سکوڵ پێکدێت
+                </template>
+            </category>
+<!---->
+                <category>
+                    <pattern>^ کەی ^ دامەزراوە ^</pattern>
+                    <template>٢٠٠٢</template>
+                </category>
+<!---->
+             <category>
+                 <pattern>^ دامەزرێنەری ^</pattern>
+                 <template>
+                     مام جەلال
+                 </template>
+             </category>
+<!---->
+             <category>
+                 <pattern>^ سەرۆکی ^</pattern>
+                 <template>
+                     دکتۆر وەلی
+                 </template>
+             </category>
+<!---->
+             <category>
+                 <pattern>^ باسی زانکۆ ^</pattern>
+                 <template>زانکۆی کۆیە زانکۆی کۆیەیە</template>
+             </category>
+<!---->
+             <category>
+                 <pattern>لینکی ^ زانکۆ ^</pattern>
+                 <template>
+                     <link>
+                         <text>koyauniversity.org</text>
+                         <url>http://www.koyauniversity.org/</url>
+                     </link>
+                 </template>
+             </category>
+            
+</aiml>

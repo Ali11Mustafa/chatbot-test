@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+
+    
+<!---->
+        <category>
+            <pattern>^ بەرنامەی خوێندن ^</pattern>
+            <template>بەرنامەی خوێندنی زانکۆی کۆیە</template>
+        </category>
+<!---->
+        <category>
+            <pattern>^ زمانی خوێندن ^</pattern>
+            <template>زمانی خوێندن ئینگلیزیە</template>
+        </category>
+<!---->
+        <category>
+            <pattern># چ زمانێکە ^</pattern>
+            <template><srai>زمانی خوێندن</srai></template>
+        </category>
+<!---->
+        <category>
+            <pattern>^ خوێندن ^ چۆنە ^</pattern>
+            <template><srai>بەرنامەی خوێندن</srai></template>
+        </category>
+    
+</aiml>
