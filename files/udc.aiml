@@ -2,20 +2,47 @@
 <aiml>
 
 <!---->
-    <category>
-        <pattern>^ گواستنەوە ^</pattern>
-            <template>
-                ئەو خوێندکارانەی کە خوازیاری گواستنەوە یان دەبەزینیان هەیە دەتوانن سەردانی ئەم لینکە بکەن بۆ وەرگرتنی زانیاری زیاتر
-                  <link>
-                      <text>www.mhe-studentaffairs.com</text>
-                      <url>www.mhe-studentaffairs.com</url>
-                  </link>
-             </template>
-    </category>
+    <!--<category>-->
+    <!--    <pattern>^ گواستنەوە ^</pattern>-->
+    <!--        <template>دەتەوێت چی بزانیت دەربارەی گواستنەوە</template>-->
+    <!--</category>-->
+    
 <!---->
-    <category>
-        <pattern>^ دابەزین ^</pattern>
-        <template><srai>^ گواستنەوە ^</srai></template>
-    </category>
-   
+
+       <category>
+           <pattern>^ کەی ^ گواستنەوە ^</pattern>
+           <template>لە بەرواری ١١\٧\٢٠٢١ تا ٢\٩\٢٠٢١ خوێندکار دەتوانێ داواکاریەکەی پێشکەش بکات</template>
+       </category>
+       
+<!---->
+
+        <category>
+            <pattern>^ کەی ^ دابەزین ^</pattern>
+            <template><srai>کەی گواستنەوە</srai></template>
+        </category>
+    
+        <category>
+           <pattern>^ مەرج و ڕێنمایی ^ *</pattern>
+           <template>
+               <think><set name="inp"><star index="3"/></set></think>
+               <condition name="inp">
+                   <li value="گواستنەوە">
+                       دەتوانیت مەرج و ڕێنماییەکانی گواستنەوەی خوێندکاران لەم لینکەی خوارەوە ببینیت: <split/> 
+                       <link>
+                           <text>مەرج و ڕێنماییەکان</text>
+                           <url>http://pressroom.koyauniversity.org/nucenamekan/------2021/---79--7--2021/issue-79-4?fbclid=IwAR0L5D0Q4hcNk6W2I3XWfw93Js0WaDIrgOQt_s0JlHWd2W8veKOiKnik2Oo</url>
+                       </link>
+                   </li>
+                   <li value="دابەزین">
+                       دەتوانیت مەرج و ڕێنماییەکانی دابەزینی خوێندکاران لەم لینکەی خوارەوە ببینیت:<split/> 
+                       <link>
+                           <text>مەرج و ڕێنماییەکان</text>
+                           <url>http://pressroom.koyauniversity.org/nucenamekan/------2021/---79--7--2021/issue-79-4?fbclid=IwAR0L5D0Q4hcNk6W2I3XWfw93Js0WaDIrgOQt_s0JlHWd2W8veKOiKnik2Oo</url>
+                       </link>
+                   </li>
+               </condition>
+           </template>
+       </category>
+       
+       
 </aiml>

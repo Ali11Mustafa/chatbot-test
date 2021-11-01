@@ -1,44 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml version="2.0">
 
-<!---->
-        <category>
-            <pattern>*</pattern>
-            <template>
-                ببورە لە پرسیارەکەت تێنەگەشتم دەتوانی ڕوونتر پرسیارەکەت بکەیت <split/>
-            </template>
-        </category>
 
-<!---->
         <category>
             <pattern>^ زانکۆ</pattern>
             <template>
                 دەتەوێت چی بزانیت دەربارەی زانکۆی کۆیە؟
-                <button>
-                    <text>نەخشەی زانکۆ</text>
-                    <postback>نەخشەی زانکۆ ^</postback>
-                </button>
-                <button>
-                    <text>ناونیشانی زانکۆ</text>
-                    <postback>ناونیشانی زانکۆ</postback>
-                </button>
-                  <button>
-                    <text>کورتەیەک دەربارەی زانکۆی کۆیە</text>
-                    <postback> باسی زانکۆ</postback>
-                </button><split/>
-                ...یان هەر پرسیارێکی ترت هەیە دەتوانی بیکەی
-                
+                <learn>
+                    <category>
+                        <pattern>لە کوێیە</pattern>
+                        <template><srai>ناونیشانی زانکۆ</srai></template>
+                    </category>
+                     <category>
+                        <pattern>^ نەخشەی ^</pattern>
+                        <template><srai>نەخشەی زانکۆ</srai></template>
+                    </category>
+                    <category>
+                        <pattern>^ چەند فاکەڵتی ^</pattern>
+                        <template><srai>چەند فاکەڵتی</srai></template>
+                    </category>
+                    <category>
+                        <pattern>کەی دامەزراوە</pattern>
+                        <template><srai>زانکۆ کەی دامەزراوە</srai></template>
+                    </category>
+                     <category>
+                        <pattern>^ ناونیشان ^</pattern>
+                        <template><srai>ناونیشانی زانکۆ</srai></template>
+                    </category>
+                </learn>
             </template>
         </category>
 <!---->
         <category>
-            <pattern>نەخشەی زانکۆ ^</pattern>
+            <pattern>^ نەخشەی * ^</pattern>
             <template>
-                <link>
-                    <text>نەخشەی زانکۆی کۆیە | گوگڵ ماپ</text>
-                    <url>https://goo.gl/maps/T9xox7akza7PFirk9</url>
-                </link>
-                
+                <think>
+                    <set name="inp"><star index="2"/></set>
+                </think>
+                <condition name="inp">
+                    <li value="زانکۆ">
+                        <link>
+                            <text>نەخشەی زانکۆی کۆیە | گوگڵ ماپ</text>
+                            <url>https://goo.gl/maps/T9xox7akza7PFirk9</url>
+                         </link>
+                    </li>
+                    
+                </condition>
             </template>
         </category>
 <!---->
@@ -69,7 +76,7 @@
         </category>
 <!---->
         <category>
-            <pattern># لە کوێیە</pattern>
+            <pattern>زانکۆ لە کوێیە</pattern>
             <template>
                 <srai>ناونیشانی زانکۆ</srai>
             </template>
@@ -94,7 +101,7 @@
             </category>
 <!---->
                 <category>
-                    <pattern>^ کەی ^ دامەزراوە ^</pattern>
+                    <pattern>زانکۆ کەی دامەزراوە</pattern>
                     <template>٢٠٠٢</template>
                 </category>
 <!---->
